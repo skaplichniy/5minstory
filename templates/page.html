@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="“{{title}}” by {{author}} | Short stories" />
+<meta property="og:url" content="https://5minstory.art" />
+    <meta property="og:description" content="99+ awesome classic and modern short stories" />
+<meta property="og:image" content="/static/images/preview.png" />
+    <title>5 minute story</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.ico"/>
+
+          <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(86797104, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/86797104" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+<div class="page">
+    <header class="header">
+        <div class="header-wrapper">
+            <h1 class='header__title'>5 minute story</h1>
+            <p class='header__description'>99+ awesome classic and modern short stories</p>
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a class="header__link header__link_story" href="/">
+                        <div class='header__link-image header__link-image_story'></div>
+                        <p class='header__link-description'>Another story</p>
+                    </a>
+                </li>
+               <li class="header__link-item">
+                    <a class="header__link" href="https://t.me/shortreader_bot">
+                        <div class='header__link-image header__link-image_telegram'></div>
+                        <p class='header__link-description'>Telegram bot</p>
+                    </a>
+                </li>
+                <!--  <li class="header__link-item">
+                    <a class="header__link" href="#">
+                        <div class='header__link-image header__link-image_coffee'></div>
+                        <p class='header__link-description'>Buy me a coffee</p>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </header>
+    {% block content %}
+    <main class="main">
+        <h2 class="main__title">“{{title}}” by {{author}}</h2>
+        <pre class="main__text">
+{{story}}<br>
+THE END<br>
+        </pre>
+    </main>
+    {% endblock %}
+    <footer class="footer">
+        <p class="footer__text">Made with <img src="/static/images/red-heart.png" alt="love" class="footer__image"/> by
+            <a class="footer__link" href="mailto:skaplichniy@gmail.com">Sergey Kaplichniy</a>
+        </p>
+    </footer>
+</div>
+
+<div class="loader loader_active">
+        <div class="loader__icon">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+<script>
+    const loader = document.querySelector('.loader')
+    const newStoryLink = document.querySelector('.header__link_story')
+    window.onload = function () {
+        loader.classList.remove('loader_active')
+    };
+    newStoryLink.addEventListener('click', () => loader.classList.add('loader_active'))
+</script>
+</html>

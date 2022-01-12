@@ -1,0 +1,1 @@
+{"id":"fb1a020b-9375-49c7-8424-e185c27552c4","space":13984,"runtime":"python3.9","name":"5minstory","path":"ktsi9s","project":"c088iopv","account":"144798365827","region":"ap-southeast-1","deps":["fastapi","requests","python-dotenv","jinja2","airtable"],"envs":["BASE_ID","TABLE_NAME","API_KEY","URL","TOKEN"],"public":true,"log_level":"debug","cron":""}
